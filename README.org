@@ -20,30 +20,38 @@
    :   C
    : #+END_SRC
 
-   #+BEGIN_SRC openbabel :exports results :file images/C.svg
+   #+BEGIN_SRC openbabel :exports none :file images/C.svg
      C
    #+END_SRC
+
+   [[./images/C.svg]]
    
    : #+BEGIN_SRC openbabel :exports results :file images/C-gen3d.svg :other-options --gen3d
    :  C
    : #+END_SRC
 
-   #+BEGIN_SRC openbabel :exports results :file images/C-gen3d.svg :other-options --gen3d
+   #+BEGIN_SRC openbabel :exports none :file images/C-gen3d.svg :other-options --gen3d
      C
    #+END_SRC
+
+   [[./images/C-gen3d.svg]]
    
    : #+BEGIN_SRC openbabel :exports results :file images/C=CO-gen3d.svg :other-options --gen3d
    :   C=CO
    : #+END_SRC
 
-   #+BEGIN_SRC openbabel :exports results :file images/C=CO-gen3d.svg :other-options --gen3d
+   #+BEGIN_SRC openbabel :exports none :file images/C=CO-gen3d.svg :other-options --gen3d
      C=CO
    #+END_SRC
    
+   [[./images/C=CO-gen3d.svg]]
+
    : #+BEGIN_SRC openbabel :exports results :file images/caffeine-gen3d.png :output-format png :other-options --gen3d
    :   Cn1cnc2n(C)c(=O)n(C)c(=O)c12
    : #+END_SRC
    
-   #+BEGIN_SRC openbabel :exports results :file images/caffeine-gen3d.png :output-format png :other-options --gen3d
+   #+BEGIN_SRC openbabel :exports none :file images/caffeine-gen3d.png :output-format png :other-options --gen3d
      Cn1cnc2n(C)c(=O)n(C)c(=O)c12
    #+END_SRC
+
+   [[./images/caffeine-gen3d.png]]
