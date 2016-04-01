@@ -1,0 +1,49 @@
+#+TITLE: Readme
+
+** ob-openbabel
+
+   This is a org babel package for OpenBabel.
+   
+** Header args
+
+   * :input-format specify the input format. Default to "smi".
+   * :output-format specify the output format. Default to "svg".
+   * :other-options specify the additional options.
+   * :openbabel specify the executeable of openbabel. Default to "babel".
+
+   * For the list for formats, [[http://openbabel.org/docs/2.3.0/FileFormats/Overview.html][see here]].
+   * Note: When openbabel fails, its exit code is 0. Please check the error in the shell again. You need to build openbabel with cairo for png output.
+
+** Examples
+
+   : #+BEGIN_SRC openbabel :exports results :file images/C.svg
+   :   C
+   : #+END_SRC
+
+   #+BEGIN_SRC openbabel :exports results :file images/C.svg
+     C
+   #+END_SRC
+   
+   : #+BEGIN_SRC openbabel :exports results :file images/C-gen3d.svg :other-options --gen3d
+   :  C
+   : #+END_SRC
+
+   #+BEGIN_SRC openbabel :exports results :file images/C-gen3d.svg :other-options --gen3d
+     C
+   #+END_SRC
+   
+   : #+BEGIN_SRC openbabel :exports results :file images/C=CO-gen3d.svg :other-options --gen3d
+   :   C=CO
+   : #+END_SRC
+
+   #+BEGIN_SRC openbabel :exports results :file images/C=CO-gen3d.svg :other-options --gen3d
+     C=CO
+   #+END_SRC
+   
+   : #+BEGIN_SRC openbabel :exports results :file images/caffeine-gen3d.png :output-format png :other-options --gen3d
+   :   Cn1cnc2n(C)c(=O)n(C)c(=O)c12
+   : #+END_SRC
+   
+   #+BEGIN_SRC openbabel :exports results :file images/caffeine-gen3d.png :output-format png :other-options --gen3d
+     Cn1cnc2n(C)c(=O)n(C)c(=O)c12
+   #+END_SRC

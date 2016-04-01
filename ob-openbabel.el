@@ -29,6 +29,8 @@
 (require 'ob-comint)
 (require 'ob-eval)
 
+(add-to-list 'org-src-lang-modes '("openbabel" . fundamental))
+
 (defvar org-babel-default-header-args:openbabel `((:input-format . "smi")
 						  (:output-format . "svg")
 						  (:other-options . "")))
@@ -37,17 +39,17 @@
   "Convert a block of openbabel-compatible chemical data with org-babel.
 This function is called by `org-babel-execute-src-block'"
   (let* ((temp-file (make-temp-file "openbabel-temp"))
-	 (command-line (format "babel %s -i%s -o%s %s"
+	 (openbabel-command (or (cdr (assoc :openbabel params)) "babel"))
+	 (output-format (cdr (assq :output-format params)))
+	 (command-line (format "%s %s -i%s -o%s %s"
+			       openbabel-command
 			       temp-file
 			       (cdr (assq :input-format params))
-			       (cdr (assq :output-format params))
+			       output-format
 			       (cdr (assq :other-options params)))))
-    (message temp-file)
     (with-temp-file temp-file
       (insert (org-babel-chomp body)))
-    (message command-line)
-    (org-babel-eval command-line
-		    "")))
+    (org-babel-eval command-line "")))
 
 (defun org-babel-prep-session:openbabel (session params)
   "Prepare SESSION according to the header arguments specified in PARAMS."
