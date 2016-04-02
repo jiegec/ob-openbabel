@@ -52,8 +52,8 @@ This function is called by `org-babel-execute-src-block'"
     (org-babel-eval command-line "")))
 
 (defun org-babel-prep-session:openbabel (session params)
-  "Prepare SESSION according to the header arguments specified in PARAMS."
-  )
+  "Prepare SESSION according to the header arguments specified in PARAMS.")
+
 
 (provide 'ob-openbabel)
 ;;; ob-openbabel.el ends here
