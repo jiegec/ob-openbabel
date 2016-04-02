@@ -11,7 +11,7 @@
    * :other-options specify the additional options.
    * :openbabel specify the executeable of openbabel. Default to "babel".
 
-   * For the list for formats, [[http://openbabel.org/docs/2.3.0/FileFormats/Overview.html][see here]].
+   * For the list of formats, [[http://openbabel.org/docs/2.3.0/FileFormats/Overview.html][see here]].
    * Note: When openbabel fails, its exit code is 0. Please check the error in the shell again. You need to build openbabel with cairo for png output.
 
 ** Examples
